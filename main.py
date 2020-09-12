@@ -6,7 +6,7 @@ import requests
 url = 'https://jadwalsholat.pkpu.or.id/?id=233' #variabel berisi url target
 content = requests.get(url) #variabel yg memanfaatkan package request untuk mengambil 'url'
 
-response = bs4.BeautifulSoup(content.text, 'html.parser') #variabel yang memanfaatkan bs4 untuk mengambil isi variabel content, html.parser untuk menerjemahkan html ke teks biasa
+response = bs4.BeautifulSoup(content.text, 'html.parser') # variabel yang memanfaatkan bs4 untuk mengambil isi variabel content, html.parser untuk menerjemahkan html ke teks biasa
 
 #menggunakan fungsi dari bs4 = .find_all, memfilter tag tertentu dari var response
 #kenapa kok tag 'table_highlight', karena pada jadwal sholat hari ini menggunakan tag tersebut dan itu target kita.
